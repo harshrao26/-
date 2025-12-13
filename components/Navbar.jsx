@@ -33,10 +33,10 @@ export default function NavbarV2() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center gap-3 cursor-pointer group">
-            <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center text-2xl shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
+            <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-600 rounded-2xl flex items-center justify-center text-2xl shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
               ⚡
             </div>
-            <span className="text-xl font-semibold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400 transition-all">
+            <span className="text-xl font-semibold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-blue-400 transition-all">
               VexaLix Technology
             </span>
           </div>
@@ -51,22 +51,22 @@ export default function NavbarV2() {
               >
                 <span className="relative z-10">{item.name}</span>
                 <div className="absolute inset-0 bg-white/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 group-hover:w-8 transition-all duration-300"></div>
+                <div className="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-blue-500 group-hover:w-8 transition-all duration-300"></div>
               </a>
             ))}
           </div>
 
           {/* CTA Button - Desktop */}
           <Link href='/contact' className="hidden md:block">
-            <button className="group relative px-6 py-2.5 bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 text-white rounded-full text-button hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-purple-500/50 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <button className="group relative px-6 py-2.5 bg-gradient-to-r from-blue-600 via-blue-600 to-blue-600 text-white rounded-full text-button hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-blue-500/50 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-blue-500 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <span className="relative z-10">Get Started</span>
             </button>
           </Link>
 
           {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300"
+            className="md:hidden w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-white/10 hover:border-blue-500/50 transition-all duration-300"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -86,12 +86,12 @@ export default function NavbarV2() {
               key={index}
               href={item.href}
               onClick={() => setIsOpen(false)}
-              className="block px-5 py-4 bg-white/5 hover:bg-white/10 rounded-2xl text-gray-300 hover:text-white text-button transition-all duration-300 border border-white/5 hover:border-purple-500/50"
+              className="block px-5 py-4 bg-white/5 hover:bg-white/10 rounded-2xl text-gray-300 hover:text-white text-button transition-all duration-300 border border-white/5 hover:border-blue-500/50"
             >
               {item.name}
             </a>
           ))}
-          <a href='/contact' className="w-full px-5 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-2xl text-button hover:scale-[1.02] transition-all duration-300 shadow-lg">
+          <a href='/contact' className="w-full px-5 py-4 bg-gradient-to-r from-blue-600 to-blue-600 text-white rounded-2xl text-button hover:scale-[1.02] transition-all duration-300 shadow-lg">
             Get Started
           </a>
         </div>

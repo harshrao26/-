@@ -124,22 +124,22 @@ export default function ContactUs() {
                 <div className="absolute inset-0 bg-grid-pattern opacity-30"></div>
 
                 {/* Gradient Orbs */}
-                <div className="absolute top-0 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-[120px]"></div>
-                <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-pink-500/20 rounded-full blur-[120px]"></div>
+                <div className="absolute top-0 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-[120px]"></div>
+                <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-[120px]"></div>
 
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         {/* Left Side - Content */}
                         <div>
                             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full mb-8">
-                                <MessageSquare className="w-4 h-4 text-purple-400" />
+                                <MessageSquare className="w-4 h-4 text-blue-400" />
                                 <span className="font-semibold text-gray-300">Get In Touch</span>
                             </div>
 
                             <h1 className="font-semibold text-white mb-6 leading-none">
                                 Let's Start a
                                 <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400">
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-400 to-blue-400">
                                     Conversation
                                 </span>
                             </h1>
@@ -155,9 +155,9 @@ export default function ContactUs() {
                                     <a
                                         key={index}
                                         href={item.link || '#'}
-                                        className="group bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300"
+                                        className="group bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-blue-500/50 transition-all duration-300"
                                     >
-                                        <item.icon className="w-6 h-6 text-purple-400 mb-3 group-hover:scale-110 transition-transform" />
+                                        <item.icon className="w-6 h-6 text-blue-400 mb-3 group-hover:scale-110 transition-transform" />
                                         <div className="text-gray-500 mb-1" style={{ fontSize: '0.875rem' }}>{item.title}</div>
                                         <div className="text-white font-semibold">{item.details}</div>
                                     </a>
@@ -183,7 +183,7 @@ export default function ContactUs() {
                                             required
                                             value={formData.name}
                                             onChange={handleChange}
-                                            className="w-full px-4 py-3 bg-black border border-zinc-800 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-purple-500 transition-colors"
+                                            className="w-full px-4 py-3 bg-black border border-zinc-800 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-blue-500 transition-colors"
                                             placeholder="John Doe"
                                         />
                                     </div>
@@ -197,7 +197,7 @@ export default function ContactUs() {
                                             required
                                             value={formData.email}
                                             onChange={handleChange}
-                                            className="w-full px-4 py-3 bg-black border border-zinc-800 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-purple-500 transition-colors"
+                                            className="w-full px-4 py-3 bg-black border border-zinc-800 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-blue-500 transition-colors"
                                             placeholder="john@company.com"
                                         />
                                     </div>
@@ -213,7 +213,7 @@ export default function ContactUs() {
                                             name="phone"
                                             value={formData.phone}
                                             onChange={handleChange}
-                                            className="w-full px-4 py-3 bg-black border border-zinc-800 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-purple-500 transition-colors"
+                                            className="w-full px-4 py-3 bg-black border border-zinc-800 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-blue-500 transition-colors"
                                             placeholder="+91 98765 00000"
                                         />
                                     </div>
@@ -226,7 +226,7 @@ export default function ContactUs() {
                                             name="company"
                                             value={formData.company}
                                             onChange={handleChange}
-                                            className="w-full px-4 py-3 bg-black border border-zinc-800 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-purple-500 transition-colors"
+                                            className="w-full px-4 py-3 bg-black border border-zinc-800 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-blue-500 transition-colors"
                                             placeholder="Your Company"
                                         />
                                     </div>
@@ -240,7 +240,7 @@ export default function ContactUs() {
                                         name="service"
                                         value={formData.service}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-3 bg-black border border-zinc-800 rounded-xl text-white focus:outline-none focus:border-purple-500 transition-colors"
+                                        className="w-full px-4 py-3 bg-black border border-zinc-800 rounded-xl text-white focus:outline-none focus:border-blue-500 transition-colors"
                                     >
                                         <option value="">Select a service</option>
                                         {services.map((service, index) => (
@@ -259,7 +259,7 @@ export default function ContactUs() {
                                         value={formData.message}
                                         onChange={handleChange}
                                         rows={4}
-                                        className="w-full px-4 py-3 bg-black border border-zinc-800 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-purple-500 transition-colors resize-none"
+                                        className="w-full px-4 py-3 bg-black border border-zinc-800 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-blue-500 transition-colors resize-none"
                                         placeholder="Tell us about your project..."
                                     ></textarea>
                                 </div>
@@ -267,7 +267,7 @@ export default function ContactUs() {
                                 <button
                                     type="submit"
                                     disabled={isSubmitting}
-                                    className="group w-full flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl font-semibold hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-purple-500/50 disabled:opacity-70 disabled:cursor-not-allowed"
+                                    className="group w-full flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-600 text-white rounded-xl font-semibold hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-blue-500/50 disabled:opacity-70 disabled:cursor-not-allowed"
                                 >
                                     {submitted ? (
                                         <>
@@ -290,7 +290,7 @@ export default function ContactUs() {
                     </div>
                 </div>
             </div>
- 
+
         </section>
     );
 }

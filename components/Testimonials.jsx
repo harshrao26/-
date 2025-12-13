@@ -21,7 +21,7 @@ export default function TestimonialsV3() {
       image: '👨‍💻',
       rating: 5,
       text: 'The cybersecurity audit revealed critical vulnerabilities. Their team fixed everything and now we sleep better at night.',
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-blue-500 to-blue-500',
     },
     {
       name: 'Emily Rodriguez',
@@ -45,7 +45,7 @@ export default function TestimonialsV3() {
       image: '👩‍💼',
       rating: 5,
       text: 'Their AI and ML solutions helped us automate processes we thought would take years. ROI was visible within months.',
-      color: 'from-violet-500 to-purple-500',
+      color: 'from-blue-500 to-blue-500',
     },
   ];
 
@@ -63,7 +63,7 @@ export default function TestimonialsV3() {
       <div className="absolute inset-0 bg-grid-pattern opacity-30"></div>
 
       {/* Gradient Accents */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-[120px]"></div>
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px]"></div>
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px]"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -73,7 +73,7 @@ export default function TestimonialsV3() {
           <h2 className="text-heading-xl md:text-display text-white mb-6 leading-none tracking-tight">
             Client
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-400 to-blue-400">
               Testimonials
             </span>
           </h2>

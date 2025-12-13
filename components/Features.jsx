@@ -11,6 +11,7 @@ import {
   Target,
   FileText
 } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Features() {
   const features = [
@@ -20,13 +21,15 @@ export default function Features() {
       description: 'Cloud setup & migration (AWS, Azure, GCP), DevOps, CI/CD, Docker, Kubernetes, and cloud security & monitoring.',
       gradient: 'from-blue-600 to-indigo-600',
       glowColor: 'rgba(79, 70, 229, 0.3)',
+      slug: 'cloud-computing-infrastructure',
     },
     {
       icon: Shield,
       title: 'Application Development & SaaS',
       description: 'Mobile app development, SaaS product development, enterprise software solutions, and API integration.',
-      gradient: 'from-purple-600 to-pink-600',
+      gradient: 'from-blue-600 to-blue-600',
       glowColor: 'rgba(168, 85, 247, 0.3)',
+      slug: 'application-development',
     },
     {
       icon: Clock,
@@ -34,6 +37,7 @@ export default function Features() {
       description: 'Corporate websites, e-commerce development, dashboards & web portals, and full stack solutions (React, Node, PHP, Python, .NET).',
       gradient: 'from-cyan-600 to-blue-600',
       glowColor: 'rgba(34, 211, 238, 0.3)',
+      slug: 'web-development',
     },
     {
       icon: TrendingUp,
@@ -41,6 +45,7 @@ export default function Features() {
       description: 'VAPT, network & endpoint security, SOC advisory & monitoring support, and ISO 27001 / GDPR / HIPAA compliance.',
       gradient: 'from-emerald-600 to-teal-600',
       glowColor: 'rgba(16, 185, 129, 0.3)',
+      slug: 'cybersecurity-services',
     },
     {
       icon: Users,
@@ -48,13 +53,15 @@ export default function Features() {
       description: 'IT strategy & digital transformation, IT outsourcing / resource augmentation, infrastructure setup, and system integration.',
       gradient: 'from-orange-600 to-red-600',
       glowColor: 'rgba(249, 115, 22, 0.3)',
+      slug: 'it-consulting-managed-services',
     },
     {
       icon: Award,
       title: 'UI/UX Design (User Experience Design)',
       description: 'UX research, wireframing & prototyping, and app & web interface design for exceptional user experiences.',
-      gradient: 'from-violet-600 to-purple-600',
+      gradient: 'from-blue-600 to-blue-600',
       glowColor: 'rgba(139, 92, 246, 0.3)',
+      slug: 'ui-ux-design',
     },
     {
       icon: Lightbulb,
@@ -62,13 +69,15 @@ export default function Features() {
       description: 'Manual testing, automation testing, performance testing, and comprehensive QA documentation.',
       gradient: 'from-yellow-600 to-orange-600',
       glowColor: 'rgba(234, 179, 8, 0.3)',
+      slug: 'software-testing',
     },
     {
       icon: Target,
       title: 'Training & Corporate Upskilling',
       description: 'Training via VEXALIX Academy: Cybersecurity, Cloud & DevOps, Project Management (PMP, PRINCE2), and ISO Auditor Training.',
-      gradient: 'from-rose-600 to-pink-600',
+      gradient: 'from-rose-600 to-blue-600',
       glowColor: 'rgba(244, 63, 94, 0.3)',
+      slug: 'training-corporate-upskilling',
     },
     {
       icon: FileText,
@@ -76,6 +85,7 @@ export default function Features() {
       description: 'Policy Writing, Technical Documentation, Multi-Language Translation, User Manuals, and API Documentation.',
       gradient: 'from-indigo-600 to-blue-600',
       glowColor: 'rgba(79, 70, 229, 0.3)',
+      slug: 'translation-documentation',
     },
   ];
 
@@ -83,7 +93,7 @@ export default function Features() {
     <section className="relative py-24 bg-black overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-transparent"></div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-transparent"></div>
       </div>
 
@@ -97,7 +107,7 @@ export default function Features() {
           <h2 className="text-heading-lg md:text-display-sm text-white mb-6 leading-none tracking-tight">
             Why Choose
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-400 to-blue-400">
               Our Services
             </span>
           </h2>
@@ -109,9 +119,10 @@ export default function Features() {
         {/* Features Grid - 2 Columns */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {features.map((feature, index) => (
-            <div
+            <Link
               key={index}
-              className="group relative bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-zinc-700 rounded-3xl p-8 transition-all duration-500 hover:scale-[1.02] overflow-hidden"
+              href={`/services?service=${feature.slug}`}
+              className="group relative bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-zinc-700 rounded-3xl p-8 transition-all duration-500 hover:scale-[1.02] overflow-hidden cursor-pointer block"
             >
               {/* Gradient Overlay */}
               <div
@@ -146,7 +157,7 @@ export default function Features() {
               <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                 <div className={`absolute inset-0 rounded-3xl bg-gradient-to-r ${feature.gradient} opacity-20 blur-sm`}></div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

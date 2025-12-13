@@ -19,7 +19,7 @@ export default function FooterV3() {
 
   const company = [
     'About Us',
-    
+
   ];
 
   const resources = [
@@ -51,7 +51,7 @@ export default function FooterV3() {
           {/* Brand Column */}
           <div className="lg:col-span-4">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center text-2xl shadow-lg">
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-600 rounded-2xl flex items-center justify-center text-2xl shadow-lg">
                 ⚡
               </div>
               <span className="text-heading-sm text-white">VexaLix Technology</span>
@@ -73,7 +73,7 @@ export default function FooterV3() {
                   {services.map((service, index) => (
                     <li key={index}>
                       <a href="#" className="text-body-sm text-gray-400 hover:text-white transition-colors duration-200 flex items-center gap-2 group">
-                        <span className="w-1.5 h-1.5 bg-purple-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                        <span className="w-1.5 h-1.5 bg-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                         {service}
                       </a>
                     </li>
@@ -88,7 +88,7 @@ export default function FooterV3() {
                   {company.map((item, index) => (
                     <li key={index}>
                       <a href="#" className="text-body-sm text-gray-400 hover:text-white transition-colors duration-200 flex items-center gap-2 group">
-                        <span className="w-1.5 h-1.5 bg-purple-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                        <span className="w-1.5 h-1.5 bg-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                         {item}
                       </a>
                     </li>
@@ -100,15 +100,15 @@ export default function FooterV3() {
               <div>
                 <h5 className="text-white text-heading-xs mb-6">Contact</h5>
                 <a href="mailto:vexalixacademy@gmail.com" className="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group">
-                  <Mail className="w-5 h-5 mt-0.5 text-purple-500 group-hover:text-purple-400" />
+                  <Mail className="w-5 h-5 mt-0.5 text-blue-500 group-hover:text-blue-400" />
                   <span className="text-body-sm">vexalixacademy@gmail.com</span>
                 </a>
                 <a href="tel:+919876543210" className="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group">
-                  <Phone className="w-5 h-5 mt-0.5 text-purple-500 group-hover:text-purple-400" />
+                  <Phone className="w-5 h-5 mt-0.5 text-blue-500 group-hover:text-blue-400" />
                   <span className="text-body-sm">+91 98765 43210</span>
                 </a>
                 <div className="flex items-start gap-3 text-gray-400">
-                  <MapPin className="w-5 h-5 mt-0.5 text-purple-500" />
+                  <MapPin className="w-5 h-5 mt-0.5 text-blue-500" />
                   <span className="text-body-sm">Bangalore, India</span>
                 </div>
 
@@ -121,7 +121,7 @@ export default function FooterV3() {
                         key={index}
                         href={social.href}
                         aria-label={social.name}
-                        className="w-10 h-10 bg-zinc-900 border border-zinc-800 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:bg-zinc-800 hover:border-purple-500 transition-all duration-300 hover:scale-110"
+                        className="w-10 h-10 bg-zinc-900 border border-zinc-800 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:bg-zinc-800 hover:border-blue-500 transition-all duration-300 hover:scale-110"
                       >
                         <social.icon className="w-5 h-5" />
                       </a>

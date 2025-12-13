@@ -15,8 +15,8 @@ export default function CTAV4() {
             </div>
 
             {/* Gradient Blobs */}
-            <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full blur-3xl opacity-30"></div>
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-br from-pink-100 to-orange-100 rounded-full blur-3xl opacity-30"></div>
+            <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-100 to-blue-100 rounded-full blur-3xl opacity-30"></div>
+            <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-br from-blue-100 to-orange-100 rounded-full blur-3xl opacity-30"></div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Main Content */}
@@ -24,7 +24,7 @@ export default function CTAV4() {
                     <h2 className="text-heading-xl md:text-display-sm text-gray-900 mb-6 leading-tight">
                         Ready to Transform
                         <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-600 to-blue-600">
                             Your Business?
                         </span>
                     </h2>
@@ -59,8 +59,8 @@ export default function CTAV4() {
                             icon: Phone,
                             label: 'Call Us',
                             value: '+91 98765 43210',
-                            gradient: 'from-purple-500 to-pink-500',
-                            bgGradient: 'from-purple-50 to-pink-50',
+                            gradient: 'from-blue-500 to-blue-500',
+                            bgGradient: 'from-blue-50 to-blue-50',
                         },
                         {
                             icon: MessageCircle,

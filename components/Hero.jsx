@@ -36,14 +36,14 @@ export default function CreativeHeroSplit() {
                         <div className="mb-10 ">
                             <h1 className={`text-display font-semibold mb-6 leading-[1.1] tracking-tight transition-all duration-1000 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                                 <div className="relative mb-3">
-                                    <span className="text-transparent  bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 animate-gradient-x drop-shadow-[0_0_50px_rgba(168,85,247,0.5)]">Technology.</span>
+                                    <span className="text-transparent  bg-clip-text bg-gradient-to-r from-blue-400 via-blue-400 to-blue-400 animate-gradient-x drop-shadow-[0_0_50px_rgba(168,85,247,0.5)]">Technology.</span>
                                 </div>
                                 <div className="relative mb-3">
                                     <span className="relative inline-block">
-                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 animate-gradient-x drop-shadow-[0_0_50px_rgba(168,85,247,0.5)]">
+                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-400 to-blue-400 animate-gradient-x drop-shadow-[0_0_50px_rgba(168,85,247,0.5)]">
                                             Innovation.
                                         </span>
-                                        <div className="absolute -inset-1 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 blur-2xl opacity-20 -z-10"></div>
+                                        <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 via-blue-400 to-blue-400 blur-2xl opacity-20 -z-10"></div>
                                     </span>
                                 </div>
                                 <div className="relative">
@@ -76,16 +76,16 @@ export default function CreativeHeroSplit() {
                                 <div className="w-1.5 h-1.5 bg-orange-200 rounded-full animate-ping"></div>
                                 <span>Cyber Security</span>
                             </span>
-                            <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-purple-500 via-purple-600 to-purple-500 text-white text-xs font-semibold rounded-xl shadow-[0_0_30px_rgba(168,85,247,0.4)] border border-purple-400/30">
+                            <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-500 text-white text-xs font-semibold rounded-xl shadow-[0_0_30px_rgba(168,85,247,0.4)] border border-blue-400/30">
                                 <span>SaaS Development</span>
-                                <div className="w-1.5 h-1.5 bg-purple-200 rounded-full animate-ping"></div>
+                                <div className="w-1.5 h-1.5 bg-blue-200 rounded-full animate-ping"></div>
                             </span>
                         </div>
 
                         {/* CTA Buttons */}
                         <div className={`flex md:flex-row flex-col  gap-4 transition-all duration-1000 delay-400 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                            <Link href="/contact" className="group relative flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white rounded-full text-button hover:scale-105 transition-all duration-300 shadow-[0_0_50px_rgba(168,85,247,0.6)] hover:shadow-[0_0_70px_rgba(168,85,247,0.8)] overflow-hidden">
-                                <div className="absolute inset-0 bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <Link href="/contact" className="group relative flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 via-blue-500 to-indigo-500 text-white rounded-full text-button hover:scale-105 transition-all duration-300 shadow-[0_0_50px_rgba(168,85,247,0.6)] hover:shadow-[0_0_70px_rgba(168,85,247,0.8)] overflow-hidden">
+                                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-blue-400 to-indigo-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-300">
                                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent animate-shimmer"></div>
                                 </div>
@@ -94,10 +94,10 @@ export default function CreativeHeroSplit() {
                                 <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-2 transition-transform" />
                             </Link>
 
-                            <Link href="/services" className="group relative px-6 py-3 bg-white/5 backdrop-blur-md text-white rounded-full text-button border-2 border-white/20  text-center hover:border-purple-500/50 hover:scale-105 transition-all duration-300 hover:shadow-[0_0_40px_rgba(168,85,247,0.4)] overflow-hidden">
-                                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                                <span className="relative z-10 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-300 group-hover:to-pink-300 transition-all">
-                                     Our Services
+                            <Link href="/services" className="group relative px-6 py-3 bg-white/5 backdrop-blur-md text-white rounded-full text-button border-2 border-white/20  text-center hover:border-blue-500/50 hover:scale-105 transition-all duration-300 hover:shadow-[0_0_40px_rgba(168,85,247,0.4)] overflow-hidden">
+                                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-blue-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                                <span className="relative z-10 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-300 group-hover:to-blue-300 transition-all">
+                                    Our Services
                                 </span>
                             </Link>
                         </div>
@@ -130,7 +130,7 @@ export default function CreativeHeroSplit() {
                             className="w-full h-full object-cover"
                             style={{ objectPosition: 'center' }}
                         >
-                            <source src="https://v1.pinimg.com/videos/mc/720p/6a/e4/18/6ae41888869a8c865c29eb4ed8020a69.mp4" type="video/mp4" />
+                            <source src="/hero.mp4" type="video/mp4" />
                         </video>
                     </div>
 
@@ -139,8 +139,8 @@ export default function CreativeHeroSplit() {
 
                     {/* Decorative Elements */}
                     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-                        <div className="absolute bottom-1/4 right-1/3 w-48 h-48 bg-pink-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+                        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+                        <div className="absolute bottom-1/4 right-1/3 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
                     </div>
                 </div>
             </div>

@@ -1,11 +1,11 @@
 'use client';
 
-import { 
-    Code, 
-    Cloud, 
-    Shield, 
-    Smartphone, 
-    Database, 
+import {
+    Code,
+    Cloud,
+    Shield,
+    Smartphone,
+    Database,
     Cpu,
     ArrowRight,
     Check,
@@ -22,9 +22,11 @@ import {
     PenTool,
     ClipboardCheck
 } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 
 export default function ServicesPage() {
+    const searchParams = useSearchParams();
     const [activeService, setActiveService] = useState(0);
 
     const services = [
@@ -46,6 +48,7 @@ export default function ServicesPage() {
             bgGradient: 'from-blue-500/10 to-cyan-500/10',
             pricing: 'Custom Quote',
             deliveryTime: 'Project Based',
+            slug: 'cloud-computing-infrastructure',
         },
         {
             icon: Smartphone,
@@ -61,10 +64,11 @@ export default function ServicesPage() {
                 'Maintenance & Support',
             ],
             technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Node.js', 'GraphQL'],
-            gradient: 'from-purple-500 to-pink-500',
-            bgGradient: 'from-purple-500/10 to-pink-500/10',
+            gradient: 'from-blue-500 to-blue-500',
+            bgGradient: 'from-blue-500/10 to-blue-500/10',
             pricing: 'Custom Quote',
             deliveryTime: 'Project Based',
+            slug: 'application-development',
         },
         {
             icon: Code,
@@ -84,6 +88,7 @@ export default function ServicesPage() {
             bgGradient: 'from-emerald-500/10 to-teal-500/10',
             pricing: 'Custom Quote',
             deliveryTime: 'Project Based',
+            slug: 'web-development',
         },
         {
             icon: Shield,
@@ -103,6 +108,7 @@ export default function ServicesPage() {
             bgGradient: 'from-red-500/10 to-orange-500/10',
             pricing: 'Custom Quote',
             deliveryTime: 'Project Based',
+            slug: 'cybersecurity-services',
         },
         {
             icon: Briefcase,
@@ -118,10 +124,11 @@ export default function ServicesPage() {
                 'Process Optimization',
             ],
             technologies: ['Agile', 'Scrum', 'ITIL', 'Cloud Strategy', 'Digital Ops'],
-            gradient: 'from-violet-500 to-purple-500',
-            bgGradient: 'from-violet-500/10 to-purple-500/10',
+            gradient: 'from-blue-500 to-blue-500',
+            bgGradient: 'from-blue-500/10 to-blue-500/10',
             pricing: 'Custom Quote',
             deliveryTime: 'Ongoing',
+            slug: 'it-consulting-managed-services',
         },
         {
             icon: ClipboardCheck,
@@ -141,6 +148,7 @@ export default function ServicesPage() {
             bgGradient: 'from-yellow-500/10 to-orange-500/10',
             pricing: 'Custom Quote',
             deliveryTime: 'Project Based',
+            slug: 'software-testing',
         },
         {
             icon: PenTool,
@@ -156,10 +164,11 @@ export default function ServicesPage() {
                 'Usability Testing',
             ],
             technologies: ['Figma', 'Adobe XD', 'Sketch', 'InVision', 'Zeplin'],
-            gradient: 'from-pink-500 to-rose-500',
-            bgGradient: 'from-pink-500/10 to-rose-500/10',
+            gradient: 'from-blue-500 to-rose-500',
+            bgGradient: 'from-blue-500/10 to-rose-500/10',
             pricing: 'Custom Quote',
             deliveryTime: 'Project Based',
+            slug: 'ui-ux-design',
         },
         {
             icon: GraduationCap,
@@ -179,6 +188,7 @@ export default function ServicesPage() {
             bgGradient: 'from-cyan-500/10 to-blue-500/10',
             pricing: 'Custom Quote',
             deliveryTime: 'Course Based',
+            slug: 'training-corporate-upskilling',
         },
         {
             icon: FileText,
@@ -198,8 +208,27 @@ export default function ServicesPage() {
             bgGradient: 'from-indigo-500/10 to-blue-500/10',
             pricing: 'Custom Quote',
             deliveryTime: 'Project Based',
+            slug: 'translation-documentation',
         },
     ];
+
+    // Auto-select service based on URL parameter
+    useEffect(() => {
+        const serviceSlug = searchParams.get('service');
+        if (serviceSlug) {
+            const serviceIndex = services.findIndex(s => s.slug === serviceSlug);
+            if (serviceIndex !== -1) {
+                setActiveService(serviceIndex);
+                // Scroll to services section after a brief delay
+                setTimeout(() => {
+                    const servicesSection = document.getElementById('services-grid');
+                    if (servicesSection) {
+                        servicesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }, 100);
+            }
+        }
+    }, [searchParams]);
 
     const process = [
         {
@@ -257,7 +286,7 @@ export default function ServicesPage() {
             <div className="absolute inset-0 bg-grid-pattern opacity-30"></div>
 
             {/* Gradient Accents */}
-            <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-[120px]"></div>
+            <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px]"></div>
             <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px]"></div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -267,27 +296,26 @@ export default function ServicesPage() {
                     <h1 className="font-semibold text-white mb-6 leading-none tracking-tight">
                         Our
                         <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-400 to-blue-400">
                             Services
                         </span>
                     </h1>
                     <p className="text-gray-400 max-w-3xl leading-relaxed">
-                        Comprehensive technology solutions designed to transform your business. 
+                        Comprehensive technology solutions designed to transform your business.
                         From strategy to execution, we deliver excellence at every step.
                     </p>
                 </div>
 
                 {/* Services Grid */}
-                <div className="grid lg:grid-cols-3 gap-6 mb-24">
+                <div id="services-grid" className="grid lg:grid-cols-3 gap-6 mb-24">
                     {services.map((service, index) => (
                         <div
                             key={index}
                             onClick={() => setActiveService(index)}
-                            className={`group cursor-pointer bg-zinc-900 border-2 rounded-3xl p-8 transition-all duration-500 ${
-                                activeService === index
-                                    ? 'border-white lg:col-span-2 lg:row-span-2'
-                                    : 'border-zinc-800 hover:border-zinc-700'
-                            }`}
+                            className={`group cursor-pointer bg-zinc-900 border-2 rounded-3xl p-8 transition-all duration-500 ${activeService === index
+                                ? 'border-white lg:col-span-2 lg:row-span-2'
+                                : 'border-zinc-800 hover:border-zinc-700'
+                                }`}
                         >
                             {/* Icon */}
                             <div className={`inline-flex w-16 h-16 bg-gradient-to-br ${service.gradient} rounded-2xl items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg`}>
@@ -296,7 +324,7 @@ export default function ServicesPage() {
 
                             {/* Title */}
                             <h3 className="font-semibold text-white mb-2">{service.title}</h3>
-                            <p className={`font-semibold mb-4 bg-gradient-to-r ${service.gradient} text-transparent bg-clip-text`} style={{fontSize: '0.875rem'}}>
+                            <p className={`font-semibold mb-4 bg-gradient-to-r ${service.gradient} text-transparent bg-clip-text`} style={{ fontSize: '0.875rem' }}>
                                 {service.tagline}
                             </p>
 
@@ -327,7 +355,7 @@ export default function ServicesPage() {
                                             {service.technologies.map((tech, i) => (
                                                 <span
                                                     key={i}
-                                                    className="px-3 py-1 bg-black border border-zinc-700 rounded-lg text-gray-300 font-medium" style={{fontSize: '0.75rem'}}
+                                                    className="px-3 py-1 bg-black border border-zinc-700 rounded-lg text-gray-300 font-medium" style={{ fontSize: '0.75rem' }}
                                                 >
                                                     {tech}
                                                 </span>
@@ -338,11 +366,11 @@ export default function ServicesPage() {
                                     {/* Pricing & Timeline */}
                                     <div className="grid grid-cols-2 gap-4 mb-6">
                                         <div className="bg-black border border-zinc-800 rounded-2xl p-4">
-                                            <div className="text-gray-500" style={{fontSize: '0.75rem', marginBottom: '0.25rem'}}>Pricing</div>
+                                            <div className="text-gray-500" style={{ fontSize: '0.75rem', marginBottom: '0.25rem' }}>Pricing</div>
                                             <div className="text-white font-semibold">{service.pricing}</div>
                                         </div>
                                         <div className="bg-black border border-zinc-800 rounded-2xl p-4">
-                                            <div className="text-gray-500" style={{fontSize: '0.75rem', marginBottom: '0.25rem'}}>Timeline</div>
+                                            <div className="text-gray-500" style={{ fontSize: '0.75rem', marginBottom: '0.25rem' }}>Timeline</div>
                                             <div className="text-white font-semibold">{service.deliveryTime}</div>
                                         </div>
                                     </div>
@@ -379,12 +407,12 @@ export default function ServicesPage() {
                                 className="relative bg-zinc-900 border border-zinc-800 rounded-3xl p-8 hover:bg-zinc-800 hover:border-zinc-700 transition-all duration-500 group"
                             >
                                 {/* Step Number */}
-                                <div className="font-semibold text-white/5 absolute top-4 right-4" style={{fontSize: '3.75rem'}}>
+                                <div className="font-semibold text-white/5 absolute top-4 right-4" style={{ fontSize: '3.75rem' }}>
                                     {item.step}
                                 </div>
 
                                 {/* Icon */}
-                                <div className="inline-flex w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                                <div className="inline-flex w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-500 rounded-2xl items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg">
                                     <item.icon className="w-7 h-7 text-white" />
                                 </div>
 
@@ -412,7 +440,7 @@ export default function ServicesPage() {
                                 key={index}
                                 className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 hover:bg-zinc-800 hover:border-zinc-700 transition-all duration-500 text-center group"
                             >
-                                <benefit.icon className="w-12 h-12 text-purple-400 mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                                <benefit.icon className="w-12 h-12 text-blue-400 mx-auto mb-4 group-hover:scale-110 transition-transform" />
                                 <h3 className="font-semibold text-white mb-3">{benefit.title}</h3>
                                 <p className="text-gray-400 leading-relaxed">
                                     {benefit.description}
@@ -421,7 +449,7 @@ export default function ServicesPage() {
                         ))}
                     </div>
                 </div>
- 
+
             </div>
 
             <style jsx>{`
