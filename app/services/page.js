@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import ServicesPage from "../../components/ServicesPage";
 
 export const metadata = {
@@ -11,7 +12,15 @@ export const metadata = {
 export default function Services() {
   return (
     <main className="min-h-screen bg-black">
-      <ServicesPage />
+      <Suspense
+        fallback={
+          <div className="min-h-screen bg-black flex items-center justify-center">
+            <div className="text-white text-xl">Loading...</div>
+          </div>
+        }
+      >
+        <ServicesPage />
+      </Suspense>
     </main>
   );
 }
