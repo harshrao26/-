@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function NavbarV2() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,14 +33,21 @@ export default function NavbarV2() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center gap-3 cursor-pointer group">
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-600 rounded-2xl flex items-center justify-center text-2xl shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
-              ⚡
+          <Link href="/" className="flex items-center gap-3 cursor-pointer group">
+            <div className="w-12 h-12 rounded-2xl overflow-hidden flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+              <Image 
+                src="/logo.png" 
+                alt="VexaLix Technology Logo" 
+                width={48} 
+                height={48}
+                className="object-contain"
+                priority
+              />
             </div>
             <span className="text-xl font-semibold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-blue-400 transition-all">
               VexaLix Technology
             </span>
-          </div>
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-1">

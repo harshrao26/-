@@ -1,6 +1,8 @@
 'use client';
 
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function FooterV3() {
   const currentYear = new Date().getFullYear();
@@ -50,12 +52,18 @@ export default function FooterV3() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
           {/* Brand Column */}
           <div className="lg:col-span-4">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-600 rounded-2xl flex items-center justify-center text-2xl shadow-lg">
-                ⚡
+            <Link href="/" className="flex items-center gap-3 mb-6 w-fit group">
+              <div className="w-12 h-12 rounded-2xl overflow-hidden flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <Image 
+                  src="/logo.png" 
+                  alt="VexaLix Technology Logo" 
+                  width={48} 
+                  height={48}
+                  className="object-contain"
+                />
               </div>
-              <span className="text-heading-sm text-white">VexaLix Technology</span>
-            </div>
+              <span className="text-heading-sm text-white group-hover:text-blue-400 transition-colors">VexaLix Technology</span>
+            </Link>
             <p className="text-body text-gray-400 leading-relaxed mb-8">
               Delivering technology, security, cloud, and consulting solutions to global clients.
             </p>
