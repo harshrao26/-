@@ -33,12 +33,12 @@ export default function NavbarV2() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 cursor-pointer group">
+          <Link href="/" className="flex items-center gap-2 cursor-pointer group">
             <div className="w-12 h-12 rounded-2xl overflow-hidden flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-              <Image 
-                src="/logo.png" 
-                alt="VexaLix Technology Logo" 
-                width={48} 
+              <Image
+                src="/logo.png"
+                alt="VexaLix Technology Logo"
+                width={48}
                 height={48}
                 className="object-contain"
                 priority
@@ -66,8 +66,8 @@ export default function NavbarV2() {
 
           {/* CTA Button - Desktop */}
           <Link href='/contact' className="hidden md:block">
-            <button className="group relative px-6 py-2.5 bg-gradient-to-r from-blue-600 via-blue-600 to-blue-600 text-white rounded-full text-button hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-blue-500/50 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-blue-500 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <button className="group relative px-6 py-2.5 bg-gradient-to-r from-orange-500 via-orange-500 to-orange-600 text-white rounded-full text-button hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-orange-500/50 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-orange-600 via-orange-600 to-orange-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <span className="relative z-10">Get Started</span>
             </button>
           </Link>
@@ -99,7 +99,7 @@ export default function NavbarV2() {
               {item.name}
             </a>
           ))}
-          <a href='/contact' className="w-full px-5 py-4 bg-gradient-to-r from-blue-600 to-blue-600 text-white rounded-2xl text-button hover:scale-[1.02] transition-all duration-300 shadow-lg">
+          <a href='/contact' className="w-full px-5 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-2xl text-button hover:scale-[1.02] transition-all duration-300 shadow-lg">
             Get Started
           </a>
         </div>

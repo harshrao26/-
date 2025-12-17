@@ -24,6 +24,7 @@ import {
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
+import Link from 'next/link';
 
 export default function ServicesPage() {
     const searchParams = useSearchParams();
@@ -376,10 +377,12 @@ export default function ServicesPage() {
                                     </div>
 
                                     {/* CTA Button */}
-                                    <button className={`w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r ${service.gradient} text-white rounded-2xl font-semibold hover:scale-105 transition-transform duration-300 shadow-lg`}>
-                                        Get Started
-                                        <ArrowRight className="w-5 h-5" />
-                                    </button>
+                                    <Link href="/contact" className="block">
+                                        <button className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-2xl font-semibold hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-orange-500/50">
+                                            Get Started
+                                            <ArrowRight className="w-5 h-5" />
+                                        </button>
+                                    </Link>
                                 </div>
                             )}
 

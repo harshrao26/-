@@ -72,8 +72,8 @@ export default function CreativeHeroSplit() {
                                 <span>Cloud Computing</span>
                                 <div className="w-1.5 h-1.5 bg-blue-200 rounded-full animate-ping"></div>
                             </span>
-                            <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-red-500 via-orange-500 to-red-500 text-white text-xs font-semibold rounded-xl shadow-[0_0_30px_rgba(239,68,68,0.4)] border border-orange-400/30">
-                                <div className="w-1.5 h-1.5 bg-orange-200 rounded-full animate-ping"></div>
+                            <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-500 text-white text-xs font-semibold rounded-xl shadow-[0_0_30px_rgba(239,68,68,0.4)] border border-orange-400/30">
+                                <div className="w-1.5 h-1.5 bg-blue-200 rounded-full animate-ping"></div>
                                 <span>Cyber Security</span>
                             </span>
                             <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-500 text-white text-xs font-semibold rounded-xl shadow-[0_0_30px_rgba(168,85,247,0.4)] border border-blue-400/30">
@@ -84,8 +84,8 @@ export default function CreativeHeroSplit() {
 
                         {/* CTA Buttons */}
                         <div className={`flex md:flex-row flex-col  gap-4 transition-all duration-1000 delay-400 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                            <Link href="/contact" className="group relative flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 via-blue-500 to-indigo-500 text-white rounded-full text-button hover:scale-105 transition-all duration-300  hover:shadow-[0_0_70px_rgba(168,85,247,0.8)] overflow-hidden">
-                                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-blue-400 to-indigo-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <Link href="/contact" className="group relative flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 via-orange-500 to-orange-600 text-white rounded-full text-button hover:scale-105 transition-all duration-300  hover:shadow-[0_0_70px_rgba(249,115,22,0.8)] overflow-hidden">
+                                <div className="absolute inset-0 bg-gradient-to-r from-orange-600 via-orange-600 to-orange-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-300">
                                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent animate-shimmer"></div>
                                 </div>

@@ -35,7 +35,7 @@ export default function CTAV4() {
 
                     {/* CTA Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-                        <Link href="/contact" className="group inline-flex items-center justify-center gap-3 px-10 py-5 bg-gray-900 text-white rounded-full text-button-lg hover:bg-gray-800 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <Link href="/contact" className="group inline-flex items-center justify-center gap-3 px-10 py-5 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-full text-button-lg hover:bg-orange-600 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/50">
                             Get Started Now
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </Link>
