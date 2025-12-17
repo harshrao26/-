@@ -73,7 +73,7 @@ export default function StatsV4() {
                         <h2 className="text-heading-xl md:text-display-sm text-gray-900 mb-6 leading-none">
                             We deliver
                             <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-600">
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00d0ff] to-[#00d0ff]">
                                 exceptional results
                             </span>
                         </h2>

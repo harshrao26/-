@@ -13,8 +13,8 @@ export default function ServicesV4() {
             description: 'Comprehensive cloud solutions for modern enterprises.',
             features: ['AWS, Azure, GCP Setup', 'DevOps, CI/CD, Docker', 'Cloud Security & Monitoring'],
             gradient: 'from-blue-50 to-indigo-50',
-            iconColor: 'text-blue-600',
-            dotColor: 'bg-blue-600',
+            iconColor: 'text-[#00d0ff]',
+            dotColor: 'bg-[#00d0ff]',
             slug: 'cloud-computing-infrastructure',
         },
         {
@@ -23,8 +23,8 @@ export default function ServicesV4() {
             description: 'Custom applications built for your business needs.',
             features: ['Mobile Apps (iOS & Android)', 'SaaS Product Development', 'Enterprise Software Solutions'],
             gradient: 'from-blue-50 to-blue-50',
-            iconColor: 'text-blue-600',
-            dotColor: 'bg-blue-600',
+            iconColor: 'text-[#00d0ff]',
+            dotColor: 'bg-[#00d0ff]',
             slug: 'application-development',
         },
         {
@@ -63,8 +63,8 @@ export default function ServicesV4() {
             description: 'Ensure quality and performance excellence.',
             features: ['Manual & Automation Testing', 'Performance Testing', 'QA Documentation'],
             gradient: 'from-blue-50 to-blue-50',
-            iconColor: 'text-blue-600',
-            dotColor: 'bg-blue-600',
+            iconColor: 'text-[#00d0ff]',
+            dotColor: 'bg-[#00d0ff]',
             slug: 'software-testing',
         },
     ];
@@ -74,7 +74,7 @@ export default function ServicesV4() {
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-20">
-                    <span className="inline-block px-4 py-2 bg-gradient-to-r from-blue-100 to-blue-100 text-blue-600 rounded-full text-label mb-6">
+                    <span className="inline-block px-4 py-2 bg-gradient-to-r from-blue-100 to-blue-100 text-[#00d0ff] rounded-full text-label mb-6">
                         Our Services
                     </span>
                     <h2 className="text-heading-xl md:text-display-sm text-gray-900 mb-6 leading-tight">
