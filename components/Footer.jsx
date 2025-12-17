@@ -54,10 +54,10 @@ export default function FooterV3() {
           <div className="lg:col-span-4">
             <Link href="/" className="flex items-center gap-3 mb-6 w-fit group">
               <div className="w-12 h-12 rounded-2xl overflow-hidden flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                <Image 
-                  src="/logo.png" 
-                  alt="VexaLix Technology Logo" 
-                  width={48} 
+                <Image
+                  src="/logo.png"
+                  alt="VexaLix Technology Logo"
+                  width={48}
                   height={48}
                   className="object-contain"
                 />
@@ -80,10 +80,10 @@ export default function FooterV3() {
                 <ul className="space-y-4">
                   {services.map((service, index) => (
                     <li key={index}>
-                      <a href="#" className="text-body-sm text-gray-400 hover:text-white transition-colors duration-200 flex items-center gap-2 group">
-                        <span className="w-1.5 h-1.5 bg-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                      <Link href="/contact" className="text-body-sm text-gray-400 hover:text-white transition-colors duration-200 flex items-center gap-2 group">
+                        <span className="w-1.5 h-1.5 bg-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                         {service}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -111,13 +111,13 @@ export default function FooterV3() {
                   <Mail className="w-5 h-5 mt-0.5 text-blue-500 group-hover:text-blue-400" />
                   <span className="text-body-sm">vexalixacademy@gmail.com</span>
                 </a>
-                <a href="tel:+919876543210" className="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group">
+                <a href="tel:+918887946496" className="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group">
                   <Phone className="w-5 h-5 mt-0.5 text-blue-500 group-hover:text-blue-400" />
-                  <span className="text-body-sm">+91 98765 43210</span>
+                  <span className="text-body-sm">+91 88879 46496</span>
                 </a>
                 <div className="flex items-start gap-3 text-gray-400">
                   <MapPin className="w-5 h-5 mt-0.5 text-blue-500" />
-                  <span className="text-body-sm">Bangalore, India</span>
+                  <span className="text-body-sm">Delhi, India</span>
                 </div>
 
                 {/* Social Links */}
@@ -143,21 +143,10 @@ export default function FooterV3() {
 
         {/* Bottom Bar */}
         <div className="border-t border-zinc-800 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex justify-center items-center">
             <p className="text-body-sm text-gray-500">
               © {currentYear} VexaLix Technology. All rights reserved.
             </p>
-            <div className="flex flex-wrap justify-center gap-6">
-              <a href="#" className="text-gray-500 hover:text-white text-body-sm transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-gray-500 hover:text-white text-sm transition-colors">
-                Terms of Service
-              </a>
-              <a href="#" className="text-gray-500 hover:text-white text-sm transition-colors">
-                Cookie Policy
-              </a>
-            </div>
           </div>
         </div>
       </div>

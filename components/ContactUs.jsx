@@ -79,13 +79,13 @@ export default function ContactUs() {
         {
             icon: Phone,
             title: 'Call Us',
-            details: '+91 98765 43210',
-            link: 'tel:+919876543210',
+            details: '+91 88879 46496',
+            link: 'tel:+918887946496',
         },
         {
             icon: MapPin,
             title: 'Visit Us',
-            details: 'Bangalore, India',
+            details: 'Delhi, India',
             link: 'https://maps.google.com',
         },
         {
