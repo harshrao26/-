@@ -62,7 +62,7 @@ export default function FooterV3() {
                   className="object-contain"
                 />
               </div>
-              <span className="text-heading-sm text-white group-hover:text-[#00d0ff] transition-colors">VexaLix Technology</span>
+              <span className="text-heading-sm text-white group-hover:text-blue-500 transition-colors">VexaLix Technology</span>
             </Link>
             <p className="text-body text-gray-400 leading-relaxed mb-8">
               Delivering technology, security, cloud, and consulting solutions to global clients.
@@ -96,7 +96,7 @@ export default function FooterV3() {
                   {company.map((item, index) => (
                     <li key={index}>
                       <a href="#" className="text-body-sm text-gray-400 hover:text-white transition-colors duration-200 flex items-center gap-2 group">
-                        <span className="w-1.5 h-1.5 bg-[#00d0ff] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                        <span className="w-1.5 h-1.5 bg-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                         {item}
                       </a>
                     </li>
@@ -108,15 +108,15 @@ export default function FooterV3() {
               <div>
                 <h5 className="text-white text-heading-xs mb-6">Contact</h5>
                 <a href="mailto:vexalixacademy@gmail.com" className="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group">
-                  <Mail className="w-5 h-5 mt-0.5 text-[#00d0ff] group-hover:text-[#00d0ff]" />
+                  <Mail className="w-5 h-5 mt-0.5 text-blue-500 group-hover:text-blue-500" />
                   <span className="text-body-sm">vexalixacademy@gmail.com</span>
                 </a>
                 <a href="tel:+918887946496" className="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group">
-                  <Phone className="w-5 h-5 mt-0.5 text-[#00d0ff] group-hover:text-[#00d0ff]" />
+                  <Phone className="w-5 h-5 mt-0.5 text-blue-500 group-hover:text-blue-500" />
                   <span className="text-body-sm">+91 88879 46496</span>
                 </a>
                 <div className="flex items-start gap-3 text-gray-400">
-                  <MapPin className="w-5 h-5 mt-0.5 text-[#00d0ff]" />
+                  <MapPin className="w-5 h-5 mt-0.5 text-blue-500" />
                   <span className="text-body-sm">Delhi, India</span>
                 </div>
 
@@ -129,7 +129,7 @@ export default function FooterV3() {
                         key={index}
                         href={social.href}
                         aria-label={social.name}
-                        className="w-10 h-10 bg-zinc-900 border border-zinc-800 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:bg-zinc-800 hover:border-[#00d0ff] transition-all duration-300 hover:scale-110"
+                        className="w-10 h-10 bg-zinc-900 border border-zinc-800 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:bg-zinc-800 hover:border-blue-500 transition-all duration-300 hover:scale-110"
                       >
                         <social.icon className="w-5 h-5" />
                       </a>

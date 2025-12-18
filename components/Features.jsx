@@ -19,7 +19,7 @@ export default function Features() {
       icon: Zap,
       title: 'Cloud Computing & Infrastructure',
       description: 'Cloud setup & migration (AWS, Azure, GCP), DevOps, CI/CD, Docker, Kubernetes, and cloud security & monitoring.',
-      gradient: 'from-[#00d0ff] to-indigo-600',
+      gradient: 'from-blue-400 to-indigo-600',
       glowColor: 'rgba(79, 70, 229, 0.3)',
       slug: 'cloud-computing-infrastructure',
     },
@@ -27,7 +27,7 @@ export default function Features() {
       icon: Shield,
       title: 'Application Development & SaaS',
       description: 'Mobile app development, SaaS product development, enterprise software solutions, and API integration.',
-      gradient: 'from-[#00d0ff] to-[#00d0ff]',
+      gradient: 'from-blue-400 to-blue-400',
       glowColor: 'rgba(168, 85, 247, 0.3)',
       slug: 'application-development',
     },
@@ -35,7 +35,7 @@ export default function Features() {
       icon: Clock,
       title: 'Web & Web Application Development',
       description: 'Corporate websites, e-commerce development, dashboards & web portals, and full stack solutions (React, Node, PHP, Python, .NET).',
-      gradient: 'from-cyan-600 to-[#00d0ff]',
+      gradient: 'from-cyan-600 to-blue-400',
       glowColor: 'rgba(34, 211, 238, 0.3)',
       slug: 'web-development',
     },
@@ -59,7 +59,7 @@ export default function Features() {
       icon: Award,
       title: 'UI/UX Design (User Experience Design)',
       description: 'UX research, wireframing & prototyping, and app & web interface design for exceptional user experiences.',
-      gradient: 'from-[#00d0ff] to-[#00d0ff]',
+      gradient: 'from-blue-400 to-blue-400',
       glowColor: 'rgba(139, 92, 246, 0.3)',
       slug: 'ui-ux-design',
     },
@@ -75,7 +75,7 @@ export default function Features() {
       icon: Target,
       title: 'Training & Corporate Upskilling',
       description: 'Training via VEXALIX Academy: Cybersecurity, Cloud & DevOps, Project Management (PMP, PRINCE2), and ISO Auditor Training.',
-      gradient: 'from-rose-600 to-[#00d0ff]',
+      gradient: 'from-rose-600 to-blue-400',
       glowColor: 'rgba(244, 63, 94, 0.3)',
       slug: 'training-corporate-upskilling',
     },
@@ -83,7 +83,7 @@ export default function Features() {
       icon: FileText,
       title: 'Translation & Documentation',
       description: 'Policy Writing, Technical Documentation, Multi-Language Translation, User Manuals, and API Documentation.',
-      gradient: 'from-indigo-600 to-[#00d0ff]',
+      gradient: 'from-indigo-600 to-blue-400',
       glowColor: 'rgba(79, 70, 229, 0.3)',
       slug: 'translation-documentation',
     },
@@ -107,7 +107,7 @@ export default function Features() {
           <h2 className="text-heading-lg md:text-display-sm text-white mb-6 leading-none tracking-tight">
             Why Choose
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00d0ff] via-[#00d0ff] to-[#00d0ff]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-400 to-blue-400">
               Our Services
             </span>
           </h2>

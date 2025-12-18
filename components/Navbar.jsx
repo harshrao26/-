@@ -44,7 +44,7 @@ export default function NavbarV2() {
                 priority
               />
             </div>
-            <span className="text-xl font-semibold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#00d0ff] group-hover:to-[#00d0ff] transition-all">
+            <span className="text-xl font-semibold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-blue-400 transition-all">
               VexaLix Technology
             </span>
           </Link>
@@ -59,7 +59,7 @@ export default function NavbarV2() {
               >
                 <span className="relative z-10">{item.name}</span>
                 <div className="absolute inset-0 bg-white/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#00d0ff] to-[#00d0ff] group-hover:w-8 transition-all duration-300"></div>
+                <div className="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-blue-400 group-hover:w-8 transition-all duration-300"></div>
               </a>
             ))}
           </div>
@@ -74,7 +74,7 @@ export default function NavbarV2() {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-white/10 hover:border-[#00d0ff]/50 transition-all duration-300"
+            className="md:hidden w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-white/10 hover:border-blue-500/50 transition-all duration-300"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -94,7 +94,7 @@ export default function NavbarV2() {
               key={index}
               href={item.href}
               onClick={() => setIsOpen(false)}
-              className="block px-5 py-4 bg-white/5 hover:bg-white/10 rounded-2xl text-gray-300 hover:text-white text-button transition-all duration-300 border border-white/5 hover:border-[#00d0ff]/50"
+              className="block px-5 py-4 bg-white/5 hover:bg-white/10 rounded-2xl text-gray-300 hover:text-white text-button transition-all duration-300 border border-white/5 hover:border-blue-500/50"
             >
               {item.name}
             </a>

@@ -24,7 +24,7 @@ export default function CTAV4() {
                     <h2 className="text-heading-xl md:text-display-sm text-gray-900 mb-6 leading-tight">
                         Ready to Transform
                         <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00d0ff] via-[#00d0ff] to-[#00d0ff]">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-400 to-blue-400">
                             Your Business?
                         </span>
                     </h2>
@@ -52,14 +52,14 @@ export default function CTAV4() {
                             icon: Mail,
                             label: 'Email Us',
                             value: 'vexalixacademy@gmail.com',
-                            gradient: 'from-[#00d0ff] to-cyan-500',
+                            gradient: 'from-blue-400 to-cyan-500',
                             bgGradient: 'from-blue-50 to-cyan-50',
                         },
                         {
                             icon: Phone,
                             label: 'Call Us',
                             value: '+91 98765 43210',
-                            gradient: 'from-[#00d0ff] to-[#00d0ff]',
+                            gradient: 'from-blue-400 to-blue-400',
                             bgGradient: 'from-blue-50 to-blue-50',
                         },
                         {
