@@ -7,18 +7,18 @@ import {
 
 export default function MarqueeV1() {
     const technologies = [
-        { icon: Code2, name: 'Web Development', gradient: 'from-blue-400 to-indigo-600' },
-        { icon: Database, name: 'Database Management', gradient: 'from-blue-400 to-blue-400' },
-        { icon: Cloud, name: 'Cloud Solutions', gradient: 'from-cyan-600 to-blue-400' },
+        { icon: Code2, name: 'Web Development', gradient: 'from-[#833DFA] to-indigo-600' },
+        { icon: Database, name: 'Database Management', gradient: 'from-[#833DFA] to-[#833DFA]' },
+        { icon: Cloud, name: 'Cloud Solutions', gradient: 'from-cyan-600 to-[#833DFA]' },
         { icon: Shield, name: 'Cybersecurity', gradient: 'from-emerald-600 to-teal-600' },
         { icon: Cpu, name: 'AI & ML', gradient: 'from-orange-600 to-red-600' },
-        { icon: Globe, name: 'Digital Transformation', gradient: 'from-blue-400 to-blue-400' },
+        { icon: Globe, name: 'Digital Transformation', gradient: 'from-[#833DFA] to-[#833DFA]' },
         { icon: Smartphone, name: 'Mobile Apps', gradient: 'from-green-600 to-emerald-600' },
-        { icon: Server, name: 'Server Management', gradient: 'from-rose-600 to-blue-400' },
-        { icon: Lock, name: 'Data Security', gradient: 'from-indigo-600 to-blue-400' },
+        { icon: Server, name: 'Server Management', gradient: 'from-rose-600 to-[#833DFA]' },
+        { icon: Lock, name: 'Data Security', gradient: 'from-indigo-600 to-[#833DFA]' },
         { icon: Zap, name: 'Performance Optimization', gradient: 'from-yellow-600 to-orange-600' },
         { icon: GitBranch, name: 'DevOps', gradient: 'from-teal-600 to-cyan-600' },
-        { icon: Layers, name: 'Microservices', gradient: 'from-blue-400 to-blue-400' },
+        { icon: Layers, name: 'Microservices', gradient: 'from-[#833DFA] to-[#833DFA]' },
     ];
 
     return (

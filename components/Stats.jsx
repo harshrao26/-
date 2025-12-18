@@ -73,17 +73,14 @@ export default function StatsV4() {
                         <h2 className="text-heading-xl md:text-display-sm text-gray-900 mb-6 leading-none">
                             We deliver
                             <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-400">
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#833DFA] to-[#833DFA]">
                                 exceptional results
                             </span>
                         </h2>
                         <p className="text-body-lg text-gray-600 mb-8 leading-relaxed">
                             Our track record speaks for itself. We've helped hundreds of businesses achieve their goals through innovative solutions and dedicated support.
                         </p>
-                        <button className="group inline-flex items-center gap-2 px-8 py-4 bg-gray-900 text-white rounded-full text-button hover:bg-gray-800 transition-all duration-300 hover:gap-4">
-                            Learn More
-                            <ArrowRight className="w-5 h-5" />
-                        </button>
+                       
                     </div>
 
                     {/* Right Stats Grid */}

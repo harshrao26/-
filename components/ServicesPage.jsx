@@ -45,8 +45,8 @@ export default function ServicesPage() {
                 'Cost Optimization',
             ],
             technologies: ['AWS', 'Azure', 'GCP', 'Docker', 'Kubernetes', 'Terraform'],
-            gradient: 'from-blue-400 to-cyan-500',
-            bgGradient: 'from-blue-400/10 to-cyan-500/10',
+            gradient: 'from-[#833DFA] to-cyan-500',
+            bgGradient: 'from-[#833DFA]/10 to-cyan-500/10',
             pricing: 'Custom Quote',
             deliveryTime: 'Project Based',
             slug: 'cloud-computing-infrastructure',
@@ -65,8 +65,8 @@ export default function ServicesPage() {
                 'Maintenance & Support',
             ],
             technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Node.js', 'GraphQL'],
-            gradient: 'from-blue-400 to-blue-400',
-            bgGradient: 'from-blue-400/10 to-blue-400/10',
+            gradient: 'from-[#833DFA] to-[#833DFA]',
+            bgGradient: 'from-[#833DFA]/10 to-[#833DFA]/10',
             pricing: 'Custom Quote',
             deliveryTime: 'Project Based',
             slug: 'application-development',
@@ -125,8 +125,8 @@ export default function ServicesPage() {
                 'Process Optimization',
             ],
             technologies: ['Agile', 'Scrum', 'ITIL', 'Cloud Strategy', 'Digital Ops'],
-            gradient: 'from-blue-400 to-blue-400',
-            bgGradient: 'from-blue-400/10 to-blue-400/10',
+            gradient: 'from-[#833DFA] to-[#833DFA]',
+            bgGradient: 'from-[#833DFA]/10 to-[#833DFA]/10',
             pricing: 'Custom Quote',
             deliveryTime: 'Ongoing',
             slug: 'it-consulting-managed-services',
@@ -165,8 +165,8 @@ export default function ServicesPage() {
                 'Usability Testing',
             ],
             technologies: ['Figma', 'Adobe XD', 'Sketch', 'InVision', 'Zeplin'],
-            gradient: 'from-blue-400 to-rose-500',
-            bgGradient: 'from-blue-400/10 to-rose-500/10',
+            gradient: 'from-[#833DFA] to-rose-500',
+            bgGradient: 'from-[#833DFA]/10 to-rose-500/10',
             pricing: 'Custom Quote',
             deliveryTime: 'Project Based',
             slug: 'ui-ux-design',
@@ -185,8 +185,8 @@ export default function ServicesPage() {
                 'Certification Prep',
             ],
             technologies: ['AWS Certified', 'PMP', 'CISSP', 'Scrum Master'],
-            gradient: 'from-cyan-500 to-blue-400',
-            bgGradient: 'from-cyan-500/10 to-blue-400/10',
+            gradient: 'from-cyan-500 to-[#833DFA]',
+            bgGradient: 'from-cyan-500/10 to-[#833DFA]/10',
             pricing: 'Custom Quote',
             deliveryTime: 'Course Based',
             slug: 'training-corporate-upskilling',
@@ -205,8 +205,8 @@ export default function ServicesPage() {
                 'Localization',
             ],
             technologies: ['CAT Tools', 'Markdown', 'LaTeX', 'CMS'],
-            gradient: 'from-indigo-500 to-blue-400',
-            bgGradient: 'from-indigo-500/10 to-blue-400/10',
+            gradient: 'from-indigo-500 to-[#833DFA]',
+            bgGradient: 'from-indigo-500/10 to-[#833DFA]/10',
             pricing: 'Custom Quote',
             deliveryTime: 'Project Based',
             slug: 'translation-documentation',
@@ -287,8 +287,8 @@ export default function ServicesPage() {
             <div className="absolute inset-0 bg-grid-pattern opacity-30"></div>
 
             {/* Gradient Accents */}
-            <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px]"></div>
-            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px]"></div>
+            <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#833DFA]/10 rounded-full blur-[120px]"></div>
+            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#833DFA]/10 rounded-full blur-[120px]"></div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
                 {/* Header */}
@@ -297,7 +297,7 @@ export default function ServicesPage() {
                     <h1 className="font-semibold text-white mb-6 leading-none tracking-tight">
                         Our
                         <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-400 to-blue-400">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#833DFA] via-[#833DFA] to-[#833DFA]">
                             Services
                         </span>
                     </h1>
@@ -415,7 +415,7 @@ export default function ServicesPage() {
                                 </div>
 
                                 {/* Icon */}
-                                <div className="inline-flex w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-400 rounded-2xl items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                                <div className="inline-flex w-14 h-14 bg-gradient-to-br from-[#833DFA] to-[#833DFA] rounded-2xl items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg">
                                     <item.icon className="w-7 h-7 text-white" />
                                 </div>
 
@@ -443,7 +443,7 @@ export default function ServicesPage() {
                                 key={index}
                                 className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 hover:bg-zinc-800 hover:border-zinc-700 transition-all duration-500 text-center group"
                             >
-                                <benefit.icon className="w-12 h-12 text-blue-500 mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                                <benefit.icon className="w-12 h-12 text-[#833DFA] mx-auto mb-4 group-hover:scale-110 transition-transform" />
                                 <h3 className="font-semibold text-white mb-3">{benefit.title}</h3>
                                 <p className="text-gray-400 leading-relaxed">
                                     {benefit.description}

@@ -37,13 +37,13 @@ export default function AboutUs() {
             icon: Lightbulb,
             title: 'Innovation',
             description: 'We constantly push boundaries to deliver cutting-edge solutions that drive results.',
-            color: 'from-blue-400 to-blue-400',
+            color: 'from-[#833DFA] to-[#833DFA]',
         },
         {
             icon: Shield,
             title: 'Transparency',
             description: 'We maintain the highest standards of honesty and open communication in all our dealings.',
-            color: 'from-blue-400 to-cyan-500',
+            color: 'from-[#833DFA] to-cyan-500',
         },
         {
             icon: Zap,
@@ -65,14 +65,14 @@ export default function AboutUs() {
             role: 'CEO & Founder',
             image: '👩‍💼',
             bio: '15+ years of tech leadership',
-            gradient: 'from-blue-400 to-cyan-500',
+            gradient: 'from-[#833DFA] to-cyan-500',
         },
         {
             name: 'Michael Chen',
             role: 'CTO',
             image: '👨‍💻',
             bio: 'Former tech lead at Fortune 500',
-            gradient: 'from-blue-400 to-blue-400',
+            gradient: 'from-[#833DFA] to-[#833DFA]',
         },
         {
             name: 'Emily Rodriguez',
@@ -105,8 +105,8 @@ export default function AboutUs() {
             <div className="absolute inset-0 bg-grid-pattern opacity-30"></div>
 
             {/* Gradient Accents */}
-            <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px]"></div>
-            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px]"></div>
+            <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#833DFA]/10 rounded-full blur-[120px]"></div>
+            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#833DFA]/10 rounded-full blur-[120px]"></div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
                 {/* Header */}
@@ -115,7 +115,7 @@ export default function AboutUs() {
                     <h1 className="font-semibold text-white mb-6 leading-none tracking-tight">
                         About
                         <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-400 to-blue-400">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#833DFA] via-[#833DFA] to-[#833DFA]">
                             Our Story
                         </span>
                     </h1>
@@ -131,7 +131,7 @@ export default function AboutUs() {
                             key={index}
                             className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 hover:bg-zinc-800 hover:border-zinc-700 transition-all duration-500 group text-center"
                         >
-                            <stat.icon className="w-10 h-10 text-blue-500 mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                            <stat.icon className="w-10 h-10 text-[#833DFA] mx-auto mb-4 group-hover:scale-110 transition-transform" />
                             <div className="font-semibold text-white mb-2" style={{ fontSize: 'clamp(1.75rem, 1.5rem + 1.25vw, 2.5rem)' }}>{stat.value}</div>
                             <div className="text-gray-400 font-medium">{stat.label}</div>
                         </div>
@@ -220,12 +220,12 @@ export default function AboutUs() {
 
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                         {[
-                            { name: 'IT & Technology', icon: Laptop, color: 'from-blue-400 to-cyan-500' },
+                            { name: 'IT & Technology', icon: Laptop, color: 'from-[#833DFA] to-cyan-500' },
                             { name: 'Finance', icon: Banknote, color: 'from-green-500 to-emerald-500' },
-                            { name: 'Healthcare', icon: Stethoscope, color: 'from-red-500 to-blue-400' },
+                            { name: 'Healthcare', icon: Stethoscope, color: 'from-red-500 to-[#833DFA]' },
                             { name: 'Retail', icon: ShoppingCart, color: 'from-orange-500 to-yellow-500' },
-                            { name: 'E-commerce', icon: ShoppingCart, color: 'from-blue-400 to-blue-400' },
-                            { name: 'Education', icon: GraduationCap, color: 'from-blue-400 to-indigo-500' },
+                            { name: 'E-commerce', icon: ShoppingCart, color: 'from-[#833DFA] to-[#833DFA]' },
+                            { name: 'Education', icon: GraduationCap, color: 'from-[#833DFA] to-indigo-500' },
                             { name: 'Government', icon: Landmark, color: 'from-gray-500 to-zinc-500' },
                             { name: 'Startups', icon: Rocket, color: 'from-rose-500 to-red-500' },
                         ].map((industry, index) => (
@@ -261,7 +261,7 @@ export default function AboutUs() {
                                     {member.image}
                                 </div>
                                 <h4 className="text-xl font-semibold text-white mb-2">{member.name}</h4>
-                                <div className="text-blue-500 font-semibold mb-3">{member.role}</div>
+                                <div className="text-[#833DFA] font-semibold mb-3">{member.role}</div>
                                 <p className="text-sm text-gray-400">{member.bio}</p>
                             </div>
                         ))}
@@ -278,7 +278,7 @@ export default function AboutUs() {
                     </div>
 
                     <div className="relative">
-                         <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-blue-400 via-blue-400 to-blue-400 hidden lg:block"></div>
+                         <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-[#833DFA] via-[#833DFA] to-[#833DFA] hidden lg:block"></div>
 
                         <div className="space-y-8">
                             {milestones.map((milestone, index) => (
@@ -286,11 +286,11 @@ export default function AboutUs() {
                                     key={index}
                                     className="relative pl-0 lg:pl-24"
                                 >
-                                     <div className="absolute left-6 top-6 w-5 h-5 bg-blue-500 rounded-full border-4 border-black hidden lg:block"></div>
+                                     <div className="absolute left-6 top-6 w-5 h-5 bg-[#833DFA] rounded-full border-4 border-black hidden lg:block"></div>
 
                                     <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 hover:bg-zinc-800 hover:border-zinc-700 transition-all duration-500 group">
                                         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                                            <span className="inline-block px-6 py-2 bg-gradient-to-r from-blue-400 to-blue-400 text-white font-semibold text-2xl rounded-2xl mb-4 md:mb-0">
+                                            <span className="inline-block px-6 py-2 bg-gradient-to-r from-[#833DFA] to-[#833DFA] text-white font-semibold text-2xl rounded-2xl mb-4 md:mb-0">
                                                 {milestone.year}
                                             </span>
                                             <h4 className="text-2xl font-semibold text-white">{milestone.title}</h4>

@@ -36,22 +36,22 @@ export default function CreativeHeroSplit() {
                         <div className="mb-10 ">
                             <h1 className={`text-display font-semibold mb-6 leading-[1.1] tracking-tight transition-all duration-1000 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                                 <div className="relative mb-3">
-                                    <span className="text-transparent  bg-clip-text bg-gradient-to-r from-blue-400 via-blue-400 to-blue-400 animate-gradient-x drop-shadow-[0_0_50px_rgba(59,130,246,0.5)]">Technology.</span>
+                                    <span className="text-transparent  bg-clip-text bg-gradient-to-r from-[#833DFA] via-[#833DFA] to-[#833DFA] animate-gradient-x drop-shadow-[0_0_50px_rgba(131,61,250,0.5)]">Technology.</span>
                                 </div>
                                 <div className="relative mb-3">
                                     <span className="relative inline-block">
-                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-400 to-blue-400 animate-gradient-x drop-shadow-[0_0_50px_rgba(59,130,246,0.5)]">
+                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#833DFA] via-[#833DFA] to-[#833DFA] animate-gradient-x drop-shadow-[0_0_50px_rgba(131,61,250,0.5)]">
                                             Innovation.
                                         </span>
-                                        <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 via-blue-400 to-blue-400 blur-2xl opacity-20 -z-10"></div>
+                                        <div className="absolute -inset-1 bg-gradient-to-r from-[#833DFA] via-[#833DFA] to-[#833DFA] blur-2xl opacity-20 -z-10"></div>
                                     </span>
                                 </div>
                                 <div className="relative">
                                     <span className="relative inline-block">
-                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-400 to-blue-400 animate-gradient-x drop-shadow-[0_0_50px_rgba(59,130,246,0.5)]">
+                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#833DFA] via-[#833DFA] to-[#833DFA] animate-gradient-x drop-shadow-[0_0_50px_rgba(131,61,250,0.5)]">
                                             Security. Growth.
                                         </span>
-                                        <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 via-blue-400 to-blue-400 blur-2xl opacity-20 -z-10"></div>
+                                        <div className="absolute -inset-1 bg-gradient-to-r from-[#833DFA] via-[#833DFA] to-[#833DFA] blur-2xl opacity-20 -z-10"></div>
                                     </span>
                                 </div>
                             </h1>
@@ -68,15 +68,15 @@ export default function CreativeHeroSplit() {
 
                         {/* Feature Tags */}
                         <div className={`grid grid-cols-3  gap-3 mb-10 transition-all duration-1000 delay-300 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                            <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-blue-400 via-blue-400 to-blue-400 text-white text-xs font-semibold rounded-xl shadow-[0_0_30px_rgba(59,130,246,0.4)] border border-blue-500/30">
+                            <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-[#833DFA] via-[#833DFA] to-[#833DFA] text-white text-xs font-semibold rounded-xl shadow-[0_0_30px_rgba(131,61,250,0.4)] border border-[#833DFA]/30">
                                 <span>Cloud Computing</span>
                                 <div className="w-1.5 h-1.5 bg-white rounded-full animate-ping"></div>
                             </span>
-                            <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-blue-400 via-blue-400 to-blue-400 text-white text-xs font-semibold rounded-xl shadow-[0_0_30px_rgba(59,130,246,0.4)] border border-blue-500/30">
+                            <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-[#833DFA] via-[#833DFA] to-[#833DFA] text-white text-xs font-semibold rounded-xl shadow-[0_0_30px_rgba(131,61,250,0.4)] border border-[#833DFA]/30">
                                 <div className="w-1.5 h-1.5 bg-white rounded-full animate-ping"></div>
                                 <span>Cyber Security</span>
                             </span>
-                            <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-blue-400 via-blue-400 to-blue-400 text-white text-xs font-semibold rounded-xl shadow-[0_0_30px_rgba(59,130,246,0.4)] border border-blue-500/30">
+                            <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-[#833DFA] via-[#833DFA] to-[#833DFA] text-white text-xs font-semibold rounded-xl shadow-[0_0_30px_rgba(131,61,250,0.4)] border border-[#833DFA]/30">
                                 <span>SaaS Development</span>
                                 <div className="w-1.5 h-1.5 bg-white rounded-full animate-ping"></div>
                             </span>
@@ -94,9 +94,9 @@ export default function CreativeHeroSplit() {
                                 <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-2 transition-transform" />
                             </Link>
 
-                            <Link href="/services" className="group relative px-6 py-3 bg-white/5 backdrop-blur-md text-white rounded-full text-button border-2 border-white/20  text-center hover:border-blue-500/50 hover:scale-105 transition-all duration-300 hover:shadow-[0_0_40px_rgba(59,130,246,0.4)] overflow-hidden">
-                                <div className="absolute inset-0 bg-gradient-to-r from-blue-400/10 via-blue-400/10 to-blue-400/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                                <span className="relative z-10 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-blue-400 transition-all">
+                            <Link href="/services" className="group relative px-6 py-3 bg-white/5 backdrop-blur-md text-white rounded-full text-button border-2 border-white/20  text-center hover:border-[#833DFA]/50 hover:scale-105 transition-all duration-300 hover:shadow-[0_0_40px_rgba(131,61,250,0.4)] overflow-hidden">
+                                <div className="absolute inset-0 bg-gradient-to-r from-[#833DFA]/10 via-[#833DFA]/10 to-[#833DFA]/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                                <span className="relative z-10 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#833DFA] group-hover:to-[#833DFA] transition-all">
                                     Our Services
                                 </span>
                             </Link>
@@ -139,8 +139,8 @@ export default function CreativeHeroSplit() {
 
                     {/* Decorative Elements */}
                     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-                        <div className="absolute bottom-1/4 right-1/3 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+                        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-[#833DFA]/10 rounded-full blur-3xl animate-pulse"></div>
+                        <div className="absolute bottom-1/4 right-1/3 w-48 h-48 bg-[#833DFA]/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
                     </div>
                 </div>
             </div>
