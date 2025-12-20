@@ -54,6 +54,7 @@ export default function CTAV4() {
                             value: 'info@vexalixtechnology.com',
                             gradient: 'from-[#833DFA] to-cyan-500',
                             bgGradient: 'from-[#833DFA]/20 to-cyan-50',
+                            href: 'mailto:info@vexalixtechnology.com',
                         },
                         {
                             icon: Phone,
@@ -61,6 +62,7 @@ export default function CTAV4() {
                             value: '+91 88879 46496',
                             gradient: 'from-[#833DFA] to-[#833DFA]',
                             bgGradient: 'from-[#833DFA]/20 to-[#833DFA]/20',
+                            href: 'tel:+918887946496',
                         },
                         {
                             icon: MessageCircle,
@@ -68,11 +70,16 @@ export default function CTAV4() {
                             value: 'Available 24/7',
                             gradient: 'from-emerald-500 to-teal-500',
                             bgGradient: 'from-emerald-50 to-teal-50',
+                            href: 'https://wa.me/918887946496?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services',
+                            isWhatsApp: true,
                         },
                     ].map((contact, index) => (
-                        <div
+                        <a
                             key={index}
-                            className={`group bg-gradient-to-br ${contact.bgGradient} rounded-3xl p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 border-transparent hover:border-white cursor-pointer`}
+                            href={contact.href}
+                            target={contact.isWhatsApp ? '_blank' : undefined}
+                            rel={contact.isWhatsApp ? 'noopener noreferrer' : undefined}
+                            className={`group bg-gradient-to-br ${contact.bgGradient} rounded-3xl p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 border-transparent hover:border-white cursor-pointer block`}
                         >
                             <div className={`inline-flex w-14 h-14 bg-gradient-to-br ${contact.gradient} rounded-2xl items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg`}>
                                 <contact.icon className="w-7 h-7 text-white" strokeWidth={2} />
@@ -83,7 +90,7 @@ export default function CTAV4() {
                             <div className="text-body-lg text-gray-900">
                                 {contact.value}
                             </div>
-                        </div>
+                        </a>
                     ))}
                 </div>
 
