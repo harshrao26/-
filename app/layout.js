@@ -12,6 +12,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* Favicon */}
+        <link rel="icon" href="/logo.png" type="image/png" />
+
         {/* Preconnect to Google Fonts for faster loading on all devices, especially iOS */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
