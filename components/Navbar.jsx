@@ -13,6 +13,7 @@ export default function NavbarV2() {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
+    { name: 'Training', href: 'https://www.vexalixacademy.in/' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -55,6 +56,8 @@ export default function NavbarV2() {
               <a
                 key={index}
                 href={item.href}
+                target={item.href.startsWith('http') ? '_blank' : undefined}
+                rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                 className="relative px-5 py-2.5 text-gray-300 hover:text-white text-body-sm transition-all duration-300 group"
               >
                 <span className="relative z-10">{item.name}</span>
@@ -93,6 +96,8 @@ export default function NavbarV2() {
             <a
               key={index}
               href={item.href}
+              target={item.href.startsWith('http') ? '_blank' : undefined}
+              rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
               onClick={() => setIsOpen(false)}
               className="block px-5 py-4 bg-white/5 hover:bg-white/10 rounded-2xl text-gray-300 hover:text-white text-button transition-all duration-300 border border-white/5 hover:border-[#833DFA]/50"
             >

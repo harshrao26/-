@@ -78,6 +78,7 @@ export default function Features() {
       gradient: 'from-rose-600 to-[#833DFA]',
       glowColor: 'rgba(244, 63, 94, 0.3)',
       slug: 'training-corporate-upskilling',
+      externalHref: 'https://www.vexalixacademy.in/',
     },
     {
       icon: FileText,
@@ -121,7 +122,9 @@ export default function Features() {
           {features.map((feature, index) => (
             <Link
               key={index}
-              href={`/services?service=${feature.slug}`}
+              href={feature.externalHref || `/services?service=${feature.slug}`}
+              target={feature.externalHref ? "_blank" : undefined}
+              rel={feature.externalHref ? "noopener noreferrer" : undefined}
               className="group relative bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-zinc-700 rounded-3xl p-8 transition-all duration-500 hover:scale-[1.02] overflow-hidden cursor-pointer block"
             >
               {/* Gradient Overlay */}
