@@ -190,7 +190,7 @@ export default function ServicesPage() {
             pricing: 'Custom Quote',
             deliveryTime: 'Course Based',
             slug: 'training-corporate-upskilling',
-            href: 'https://www.vexalixacademy.in/',
+            href: 'https://www.vexalixacademy.com/',
         },
         {
             icon: FileText,

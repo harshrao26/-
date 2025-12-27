@@ -78,7 +78,7 @@ export default function Features() {
       gradient: 'from-rose-600 to-[#833DFA]',
       glowColor: 'rgba(244, 63, 94, 0.3)',
       slug: 'training-corporate-upskilling',
-      externalHref: 'https://www.vexalixacademy.in/',
+      externalHref: 'https://www.vexalixacademy.com/',
     },
     {
       icon: FileText,

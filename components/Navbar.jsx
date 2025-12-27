@@ -13,7 +13,7 @@ export default function NavbarV2() {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
-    { name: 'Training', href: 'https://www.vexalixacademy.in/' },
+    { name: 'Training', href: 'https://www.vexalixacademy.com/' },
     { name: 'Contact', href: '/contact' },
   ];
 

@@ -3,7 +3,7 @@ import FooterV3 from "@/components/Footer";
 import NavbarV2 from "@/components/Navbar";
 
 export const metadata = {
-  title: "VexaLix Technology | Technology. Innovation. Security. Growth.",
+  title: "Vexalix Technology | Technology. Innovation. Security. Growth.",
   description:
     "Global provider of IT services, digital transformation, application development, cybersecurity, cloud solutions, and consulting services. Serving India, USA, UK, Europe, Dubai, Saudi Arabia, Qatar & Middle East.",
 };
