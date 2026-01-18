@@ -1,23 +1,48 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+
+export const revalidate = 3600; // Cache for 1 hour
 import BlogContent from "@/components/blog/BlogContent";
 import BlogCard from "@/components/blog/BlogCard";
 import ShareButtons from "@/components/blog/ShareButtons";
 
+import dbConnect from "@/lib/db";
+import Blog from "@/app/models/Blog";
+
 async function getBlog(slug) {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-    const response = await fetch(`${baseUrl}/api/blogs/${slug}`, {
-      next: { revalidate: 3600 },
-    });
+    await dbConnect();
 
-    if (!response.ok) {
+    // Find blog by slug
+    const blog = await Blog.findOne({
+      urlSlug: slug,
+      status: "visible",
+    }).lean();
+
+    if (!blog) {
       return null;
     }
 
-    const data = await response.json();
-    return data.success ? data.data : null;
+    // Get related blogs
+    const relatedBlogs = await Blog.find({
+      _id: { $ne: blog._id },
+      status: "visible",
+      $or: [
+        { category: blog.category },
+        { urlSlug: { $in: blog.relatedBlog || [] } },
+      ],
+    })
+      .select(
+        "title urlSlug metaDescription featuredImage imageUrl image category publishedAt",
+      )
+      .limit(3)
+      .lean();
+
+    return {
+      blog: JSON.parse(JSON.stringify(blog)),
+      relatedBlogs: JSON.parse(JSON.stringify(relatedBlogs)),
+    };
   } catch (error) {
     console.error("Error fetching blog:", error);
     return null;
@@ -45,7 +70,7 @@ export async function generateMetadata({ params }) {
       title: blog.metaTitle || blog.title,
       description: blog.metaDescription,
       images: [blog.featuredImage || blog.imageUrl || blog.image].filter(
-        Boolean
+        Boolean,
       ),
       type: "article",
       publishedTime: blog.publishedAt,
@@ -56,7 +81,7 @@ export async function generateMetadata({ params }) {
       title: blog.metaTitle || blog.title,
       description: blog.metaDescription,
       images: [blog.featuredImage || blog.imageUrl || blog.image].filter(
-        Boolean
+        Boolean,
       ),
     },
   };
@@ -78,14 +103,12 @@ export default async function BlogDetailPage({ params }) {
   return (
     <div className="min-h-screen bg-white">
       {/* Back Button */}
-       
 
       {/* Blog Content Area */}
       <main className="container mx-auto">
         <BlogContent blog={blog} />
 
         {/* Share Section */}
-        
 
         {/* Related Articles Section */}
         {relatedBlogs && relatedBlogs.length > 0 && (
