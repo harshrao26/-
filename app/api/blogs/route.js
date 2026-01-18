@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import dbConnect from "@/lib/db";
 import Blog from "@/app/models/Blog";
 
+export const revalidate = 3600; // Cache for 1 hour
+
 export async function GET(request) {
   try {
     await dbConnect();
@@ -33,7 +35,7 @@ export async function GET(request) {
     const [blogs, total, categories] = await Promise.all([
       Blog.find(query)
         .select(
-          "title urlSlug metaDescription featuredImage imageUrl image category author publishedAt readability wordCount"
+          "title urlSlug metaDescription featuredImage imageUrl image category author publishedAt readability wordCount",
         )
         .sort(sort)
         .skip(skip)
@@ -60,7 +62,7 @@ export async function GET(request) {
     console.error("Error fetching blogs:", error);
     return NextResponse.json(
       { success: false, error: "Failed to fetch blogs" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

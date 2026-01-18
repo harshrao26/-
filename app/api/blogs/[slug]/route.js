@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import dbConnect from "@/lib/db";
 import Blog from "@/app/models/Blog";
 
+export const revalidate = 3600; // Cache for 1 hour
+
 export async function GET(request, { params }) {
   try {
     await dbConnect();
@@ -17,7 +19,7 @@ export async function GET(request, { params }) {
     if (!blog) {
       return NextResponse.json(
         { success: false, error: "Blog not found" },
-        { status: 404 }
+        { status: 404 },
       );
     }
 
@@ -31,7 +33,7 @@ export async function GET(request, { params }) {
       ],
     })
       .select(
-        "title urlSlug metaDescription featuredImage imageUrl image category publishedAt"
+        "title urlSlug metaDescription featuredImage imageUrl image category publishedAt",
       )
       .limit(3)
       .lean();
@@ -47,7 +49,7 @@ export async function GET(request, { params }) {
     console.error("Error fetching blog:", error);
     return NextResponse.json(
       { success: false, error: "Failed to fetch blog" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
