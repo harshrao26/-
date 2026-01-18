@@ -1,15 +1,9 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import {
-  ArrowLeft,
-  Share2,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Link as LinkIcon,
-} from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import BlogContent from "@/components/blog/BlogContent";
 import BlogCard from "@/components/blog/BlogCard";
+import ShareButtons from "@/components/blog/ShareButtons";
 
 async function getBlog(slug) {
   try {
@@ -31,7 +25,8 @@ async function getBlog(slug) {
 }
 
 export async function generateMetadata({ params }) {
-  const data = await getBlog(params.slug);
+  const { slug } = await params;
+  const data = await getBlog(slug);
 
   if (!data) {
     return {
@@ -68,7 +63,8 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function BlogDetailPage({ params }) {
-  const data = await getBlog(params.slug);
+  const { slug } = await params;
+  const data = await getBlog(slug);
 
   if (!data) {
     notFound();
@@ -80,99 +76,43 @@ export default async function BlogDetailPage({ params }) {
   }/blogs/${blog.urlSlug}`;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-indigo-50/20">
+    <div className="min-h-screen bg-white">
       {/* Back Button */}
-      <div className="container mx-auto max-w-6xl px-4 pt-8">
-        <Link
-          href="/blogs"
-          className="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 font-medium transition-colors group"
-        >
-          <ArrowLeft className="w-5 h-5 transition-transform group-hover:-translate-x-1" />
-          Back to Blogs
-        </Link>
-      </div>
+       
 
-      {/* Blog Content */}
-      <main className="container mx-auto max-w-6xl px-4 py-8">
+      {/* Blog Content Area */}
+      <main className="container mx-auto">
         <BlogContent blog={blog} />
 
         {/* Share Section */}
-        <div className="max-w-4xl mx-auto mt-12 p-6 bg-white rounded-2xl shadow-md border border-gray-100">
-          <div className="flex items-center justify-between flex-wrap gap-4">
-            <div className="flex items-center gap-3">
-              <Share2 className="w-5 h-5 text-indigo-600" />
-              <h3 className="text-lg font-semibold text-gray-900">
-                Share this article
-              </h3>
-            </div>
+        
 
-            <div className="flex gap-3">
-              <a
-                href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-                  currentUrl
-                )}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors"
-                aria-label="Share on Facebook"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-
-              <a
-                href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
-                  currentUrl
-                )}&text=${encodeURIComponent(blog.title)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-sky-500 text-white rounded-full hover:bg-sky-600 transition-colors"
-                aria-label="Share on Twitter"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-
-              <a
-                href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
-                  currentUrl
-                )}&title=${encodeURIComponent(blog.title)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-blue-700 text-white rounded-full hover:bg-blue-800 transition-colors"
-                aria-label="Share on LinkedIn"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-
-              <button
-                onClick={() => {
-                  navigator.clipboard.writeText(currentUrl);
-                  alert("Link copied to clipboard!");
-                }}
-                className="p-3 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300 transition-colors"
-                aria-label="Copy link"
-              >
-                <LinkIcon className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Related Blogs */}
+        {/* Related Articles Section */}
         {relatedBlogs && relatedBlogs.length > 0 && (
-          <section className="mt-16">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Related Articles
-              </h2>
-              <p className="text-gray-600 text-lg">
-                Continue exploring with these related posts
-              </p>
-            </div>
+          <section className="bg-gray-50/50 py-24 border-t border-gray-100">
+            <div className="container mx-auto max-w-5xl px-4">
+              <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 px-2">
+                <div>
+                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-3">
+                    Continue <span className="text-blue-600">Reading</span>
+                  </h2>
+                  <p className="text-gray-500 text-sm font-medium">
+                    More articles that might interest you
+                  </p>
+                </div>
+                <Link
+                  href="/blogs"
+                  className="text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors"
+                >
+                  View all posts →
+                </Link>
+              </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {relatedBlogs.map((relatedBlog) => (
-                <BlogCard key={relatedBlog._id} blog={relatedBlog} />
-              ))}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {relatedBlogs.map((relatedBlog) => (
+                  <BlogCard key={relatedBlog._id} blog={relatedBlog} />
+                ))}
+              </div>
             </div>
           </section>
         )}

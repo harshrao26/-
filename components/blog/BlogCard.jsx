@@ -7,8 +7,8 @@ export default function BlogCard({ blog }) {
     const excerpt = blog.metaDescription || blog.content?.replace(/<[^>]*>/g, '').substring(0, 120) + '...';
 
     return (
-        <article className="flex flex-col h-full bg-white rounded-2xl transition-all duration-300">
-            <Link href={`/blogs/${blog.urlSlug}`} className="relative w-full aspect-[1.5/1] overflow-hidden rounded-2xl mb-6">
+        <article className="flex flex-col h-full border border-gray-300 bg-white rounded-2xl transition-all duration-300">
+            <Link href={`/blogs/${blog.urlSlug}`} className="relative w-full aspect-[1.5/1] overflow-hidden rounded-2xl ">
                 <img
                     src={imageUrl}
                     alt={blog.imageAlt || blog.title}
@@ -19,14 +19,14 @@ export default function BlogCard({ blog }) {
                 />
             </Link>
 
-            <div className="flex flex-col flex-1 px-1">
+            <div className="flex flex-col flex-1 p-4">
                 <Link href={`/blogs/${blog.urlSlug}`} className="no-underline group">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight group-hover:text-blue-600 transition-colors duration-200">
+                    <h3 className="text-base font-semibold text-gray-900 mb-3 leading-tight group-hover:text-blue-600 transition-colors duration-200">
                         {blog.title}
                     </h3>
                 </Link>
 
-                <p className="text-gray-500 text-sm leading-relaxed mb-6 flex-1">
+                <p className="text-gray-500 text-xs leading-relaxed mb-6 flex-1">
                     {excerpt}
                 </p>
 

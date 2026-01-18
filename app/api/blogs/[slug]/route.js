@@ -6,7 +6,7 @@ export async function GET(request, { params }) {
   try {
     await dbConnect();
 
-    const { slug } = params;
+    const { slug } = await params;
 
     // Find blog by slug
     const blog = await Blog.findOne({
