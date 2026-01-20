@@ -15,7 +15,7 @@ export default function NavbarV2() {
     { name: 'Services', href: '/services' },
     { name: 'Training', href: 'https://www.vexalixacademy.com/' },
     { name: 'Contact', href: '/contact' },
-    // { name: 'Blogs', href: '/blogs' },
+    { name: 'Blogs', href: '/blogs' },
   ];
 
   useEffect(() => {
